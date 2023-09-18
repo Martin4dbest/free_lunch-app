@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Lunch App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Lunch App</h1>
+        {% if current_user.is_authenticated %}
+            <p>Hello, {{ current_user.username }}!</p>
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/orders">Order History</a></li>
+            <li><a href="/meals">My Meals</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; {{ current_year }} Lunch App</p>
+    </footer>
+</body>
+</html>

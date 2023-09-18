@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Lunch App</h1>
+    <h2>Lunch Menu</h2>
+    <ul>
+        {% for lunch in lunches %}
+            <li>{{ lunch.name }} - ${{ lunch.price }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/login">Login</a>
+    <a href="/orders">Order History</a>
+    <a href="/meals">My Meals</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

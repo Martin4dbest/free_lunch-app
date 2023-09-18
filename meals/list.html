@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Meals</title>
+</head>
+<body>
+    <h1>My Meals</h1>
+    <ul>
+        {% for meal in meals %}
+            <li>{{ meal.name }} - {{ meal.description }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/meals/create">Create a Meal</a>
+    <a href="/">Back to Home</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

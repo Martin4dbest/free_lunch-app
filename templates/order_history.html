@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order History</title>
+</head>
+<body>
+    <h1>Order History</h1>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.timestamp }} - {{ order.lunch.name }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/">Back to Home</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

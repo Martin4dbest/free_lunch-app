@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Order History{% endblock %}
+
+{% block content %}
+    <h2>Order History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Order Date</th>
+                <th>Lunch</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+                <tr>
+                    <td>{{ order.timestamp }}</td>
+                    <td>{{ order.lunch.name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
